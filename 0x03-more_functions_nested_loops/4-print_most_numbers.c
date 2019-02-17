@@ -3,8 +3,9 @@
  *print_most_numbers - print the natural numbers whitout '2' and '4'.
  *@void: nothing.
  *
- *Description: The function iterate inside conditional in a for loop each number
- *natural and print them with the function _putchar.
+ *Description: The function iterate inside conditional in a for loop each
+ *number natural and print them with the function _putchar without
+ *exceptions. 
  *Return: nothing.
  */
 void print_most_numbers(void)
