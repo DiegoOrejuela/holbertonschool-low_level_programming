@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- *print_diagonal - print '_' n times.
- *@n: times that '/' print.
+ *print_square - prints a square.
+ *@size: square side.
  *
- *Description: The function print '/' n times.
+ *Description: The function prints a square with the symbol '#'.
  *Return: nothing.
  */
 void print_square(int size)
