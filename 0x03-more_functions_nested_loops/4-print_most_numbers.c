@@ -5,7 +5,7 @@
  *
  *Description: The function iterate inside conditional in a for loop each
  *number natural and print them with the function _putchar without
- *exceptions. 
+ *exceptions.
  *Return: nothing.
  */
 void print_most_numbers(void)
