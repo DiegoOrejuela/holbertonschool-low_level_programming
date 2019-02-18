@@ -28,7 +28,14 @@ int main(void)
 			}
 			if (rtr != 0 && rfive == 0)
 			{
-				printf("Buzz ");
+				if (i != 100)
+				{
+					printf("Buzz ");
+				}
+				if (i == 100)
+				{
+					printf("Buzz");
+				}
 			}
 			if (rtr == 0 && rfive == 0)
 			{
