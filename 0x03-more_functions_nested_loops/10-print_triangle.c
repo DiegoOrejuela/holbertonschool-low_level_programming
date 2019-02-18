@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
- *print_square - prints a square.
- *@size: square side.
+ *print_triangle - prints a triangle.
+ *@size: triangle high.
  *
- *Description: The function prints a square with the symbol '#'.
+ *Description: The function prints a triangle with the symbol '#'.
  *Return: nothing.
  */
 void print_triangle(int size)
