@@ -1,0 +1,1 @@
+This proyect is about pointersm arrays and strings at programation lenguange C. 
