@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
- *_isdigit - identify if variable 'c' is a digit or any character.
- *@c: is the letter income for de user.
+ *reset_to_98 - updates the value it points to to 98.
+ *@n: is the parameter for pointer.
  *
- *Description: The function compare the variable 'c' with each natural number.
- *Return: 1 if 'c' is a natural number and 0 if is other character .
+ *Description: The function take a pointer int variable in the parameter *n
+ * and update the value of the variable that appoint.
  */
 void reset_to_98(int *n)
 {
