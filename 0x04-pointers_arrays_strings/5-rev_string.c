@@ -19,7 +19,7 @@ void rev_string(char *s)
 	}
 
 	i--;
-	while (i != j)
+	while (i != j && i > j)
 	{
 		aux = *(s + i);
 		*(s + i) = *(s + j);
