@@ -1,11 +1,10 @@
 #include "holberton.h"
 /**
- *rev_string - function that reverses a string.
- *@s: string to avaluate.
+ *puts2 - function that reverses a string.
+ *@str: string to avaluate.
  *
- *Description: The function take a string and iterate it with first a loop
- *while until the value '\0' for to save the long array. After, again
- *iterate 's' for to assign the new values.
+ *Description: The function take a string and iterate it of two at two
+ *for print.
  **/
 void puts2(char *str)
 {
@@ -14,7 +13,7 @@ void puts2(char *str)
 	while (*(str + i))
 	{
 		_putchar(*(str + i));
-		i+=2;
+		i += 2;
 	}
 	_putchar('\n');
 }
