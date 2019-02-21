@@ -1,11 +1,12 @@
 #include "holberton.h"
 /**
- *_strcat - concatenates two strings.
+ *_strncat - concatenates two strings.
  *@dest: string dest.
  *@src: string for add dest.
+ *@n: númber bytes for print.
  *
- *Description: The function take two array and iterate for paste one
- *in other.
+ *Description: The function take two array and iterate for to find
+ *their size. The, other loop iterate for paste src inside dest.
  *Return: dest array with the src's content pasted.
  **/
 char *_strncat(char *dest, char *src, int n)
@@ -18,12 +19,12 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		i++;
 	}
-	while(*(src + j) != '\0')
+	while (*(src + j) != '\0')
 	{
 		j++;
 	}
 
-	if(n > j)
+	if (n > j)
 	{
 		n = j;
 	}
