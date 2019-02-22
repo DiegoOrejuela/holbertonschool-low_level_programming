@@ -13,10 +13,6 @@ void reverse_array(int *a, int n)
 	char aux;
 
 	n--;
-	if (n <= 0)
-	{
-		;
-	}
 	if (n > 0)
 	{
 		while (i != n && i < n)
