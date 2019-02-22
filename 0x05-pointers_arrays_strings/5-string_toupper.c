@@ -1,19 +1,20 @@
 #include "holberton.h"
 /**
- *reverse_array - reverses the content of an array of integers.
- *@a: string to avaluate.
- *@n: number the items's array.
+ *string_toupper - changes all lowercase letters of a string to uppercase.
+ *@str: string to avaluate.
  *
- *Description: The function take a array the type int and iterate it
- *for assign the first values in the last value, and viceversa.
+ *Description: The function take a array the type char and iterate it
+ *for assign the values of lowercase to uppercase if the values are
+ *letters.
+ *Return: the str string in uppercase.
  **/
 char *string_toupper(char *str)
 {
 	int i = 0;
 
-       	while (str[i])
+	while (str[i])
 	{
-		if(str[i] >= 'a' && str[i] <= 'z')
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] -= 32;
 		}
