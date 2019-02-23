@@ -1,37 +1,26 @@
 #include "holberton.h"
 /**
- *cap_string - encodes a string into 1337.
- *@str: string to avaluate.
+ *leet - encodes a string into 1337.
+ *@array: string to avaluate.
  *
- *Description: The function take a array and this is comparated with a
- *array that have separators. If the character of the two arrays in the
- *iteration is same,  the following character letter is upper.
- *Return: the str string changed.
+ *Description: The function compare two array, and convert the first
+ *in code 1337, trough the positions the arra with the array that
+ *save the elements of codification.
  **/
-char *leet(char *str);
+char *leet(char *array)
 {
 	int i = 0;
 	int j = 0;
-	char sep[] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')',
-		      '{', '}'};
+	char str[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char key[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
-	while (str[i])
+	while (array[i])
 	{
-		if (str[0])
+		while (str[j])
 		{
-			if (str[0] >= 'a' && str[0] <= 'z')
+			if (array[i] == str[j])
 			{
-				str[0] -= 32;
-			}
-		}
-		while (sep[j])
-		{
-			if (str[i] == sep[j])
-			{
-				if (str[i + 1] >= 'a' && str[i + 1] <= 'z')
-				{
-					str[i + 1] -= 32;
-				}
+				array[i] = key[j];
 			}
 			j++;
 		}
@@ -39,5 +28,5 @@ char *leet(char *str);
 		j = 0;
 	}
 
-	return (str);
+	return (array);
 }
