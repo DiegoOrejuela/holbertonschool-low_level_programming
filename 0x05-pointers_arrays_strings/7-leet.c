@@ -6,6 +6,7 @@
  *Description: The function compare two array, and convert the first
  *in code 1337, trough the positions the arra with the array that
  *save the elements of codification.
+ *Return: array modified.
  **/
 char *leet(char *array)
 {
