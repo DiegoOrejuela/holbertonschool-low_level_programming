@@ -1,0 +1,1 @@
+This proyect is about use of pointers, arrays and strings. The focus is at pointers to pointers and multidimension arrays. 
