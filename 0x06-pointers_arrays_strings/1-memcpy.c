@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
- *_memset - fills memory with a constant byte.
- *@s: string to avaluate.
- *@b: value char.
+ *_memcpy - copies memory area.
+ *@dest: string to modify.
+ *@src: string source.
  *@n: number of posicions to modify.
  *
- *Description: The function modify the string @s for parameter, changing the
- *positions @n for the value @b.
+ *Description: The function modify the string @dest for parameter, changing
+ *the positions @n for the values in array @src.
  *Return: array modified.
  **/
 char *_memcpy(char *dest, char *src, unsigned int n)
