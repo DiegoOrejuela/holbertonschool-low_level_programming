@@ -1,37 +1,13 @@
 #include "holberton.h"
 /**
- *set_string - locates a substring.
- *@s: string source.
- *@to: pattern strings.
+ *set_string - sets the value of a pointer to a char.
+ *@s: double pointer.
+ *@to: pointer.
  *
- *Description: The function iterate the string @haystack for parameter for
- *find the pattern the @needle
- *Return: the position @haystack or null.
+ *Description: The function sets the directon that appoint the apointer
+ *saved in @s, in the direction the apoint @to.
  **/
 void set_string(char **s, char *to)
 {
-	int i = 0;
-	int j = 0;
-
-	if(needle[0] == '\0')
-	{
-		return (0);
-	}
-	while (haystack[i])
-	{
-		if (haystack[i] == needle[j])
-		{
-			j++;
-		}
-		else
-		{
-			j = 0;
-		}
-		i++;
-		if (needle[j] == '\0')
-		{
-			return (haystack + i - j);
-		}
-	}
-	return (0);
+	*s = to;
 }
