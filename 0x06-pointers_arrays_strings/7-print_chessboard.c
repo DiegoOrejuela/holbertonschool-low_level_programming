@@ -1,36 +1,23 @@
 #include "holberton.h"
 /**
- *_print_chessboard - locates a substring.
+ *print_chessboard - prints the chessboard.
  *@a: string source.
  *
- *Description: The function iterate the string @haystack for parameter for
- *find the pattern the @needle
- *Return: the position @haystack or null.
+ *Description: The function print all items iteratating
+ *the multidimensional array. When is the final the an item, print
+ *new line.
  **/
 void print_chessboard(char (*a)[8])
 {
-	int i = 0;
-	int j = 0;
+	int i;
+	int j;
 
-	if(needle[0] == '\0')
+	for (i = 0; i < 8; i++)
 	{
-		return (0);
+		for (j = 0; j < 8; j++)
+		{
+			_putchar(a[i][j]);
+		}
+		_putchar('\n');
 	}
-	while (haystack[i])
-	{
-		if (haystack[i] == needle[j])
-		{
-			j++;
-		}
-		else
-		{
-			j = 0;
-		}
-		i++;
-		if (needle[j] == '\0')
-		{
-			return (haystack + i - j);
-		}
-	}
-	return (0);
 }
