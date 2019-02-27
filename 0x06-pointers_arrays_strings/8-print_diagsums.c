@@ -1,37 +1,29 @@
+#include <stdio.h>
 #include "holberton.h"
 /**
- *_print_diagsums - locates a substring.
- *@a: string source.
- *@size: pattern strings.
+ *print_diagsums - prints the sum of the two diagonals of a square
+ *matrix of integers.
+ *@a: pointer.
+ *@size: size pointer;
  *
- *Description: The function iterate the string @haystack for parameter for
- *find the pattern the @needle
- *Return: the position @haystack or null.
+ *Description: The function sum the the values in diagonals the a array
+ *same in your dimensions x and y.
  **/
 void print_diagsums(int *a, int size)
 {
-	int i = 0;
-	int j = 0;
+	int i;
+	int dd;
+	int di;
 
-	if(needle[0] == '\0')
+	for (i = 0; i < (size * size); i += (size + 1))
 	{
-		return (0);
+		dd += *(a + i);
 	}
-	while (haystack[i])
+	for (i = (size - 1); (i + 1) < (size * size); i += (size - 1))
 	{
-		if (haystack[i] == needle[j])
-		{
-			j++;
-		}
-		else
-		{
-			j = 0;
-		}
-		i++;
-		if (needle[j] == '\0')
-		{
-			return (haystack + i - j);
-		}
+		di += *(a + i);
 	}
-	return (0);
+	printf("%d, %d\n", dd, di);
+	dd = 0;
+	di = 0;
 }
