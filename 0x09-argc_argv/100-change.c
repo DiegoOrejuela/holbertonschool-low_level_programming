@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int cents = 0;
 	int money;
 
-	if (argc == 1)
+	if (argc < 2)
 	{
 		printf("Error\n");
 		return (1);
@@ -25,27 +25,27 @@ int main(int argc, char *argv[])
 	if (money / 25 != 0)
 	{
 		cents += money / 25;
-		money -= 25 * (money / 25);
+		money = (money % 25);
 	}
 	if (money / 10 != 0)
 	{
 		cents += money / 10;
-		money -= 10 * (money / 10);
+		money = (money % 10);
 	}
 	if (money / 5 != 0)
 	{
 		cents += money / 5;
-		money -= 5 * (money / 10);
+		money = (money % 10);
 	}
 	if (money / 2 != 0)
 	{
 		cents += money / 2;
-		money -= 2 * (money / 2);
+		money = (money % 2);
 	}
 	if (money / 1 != 0)
 	{
 		cents += money / 1;
-		money -= 1 * (money / 1);
+		money -= (money % 1);
 	}
 	printf("%d\n", cents);
 	return (0);
