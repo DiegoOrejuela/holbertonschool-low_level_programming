@@ -9,8 +9,10 @@
  */
 int main(int argc, char *argv[])
 {
+	int changes[] = {25, 10, 5, 2, 1};
 	int cents = 0;
 	int money;
+	int i;
 
 	if (argc < 2)
 	{
@@ -21,31 +23,12 @@ int main(int argc, char *argv[])
 	if (money < 0)
 	{
 		printf("0\n");
+		return (1);
 	}
-	if (money / 25 != 0)
+	for (i = 0; i < 5; i++)
 	{
-		cents += money / 25;
-		money = (money % 25);
-	}
-	if (money / 10 != 0)
-	{
-		cents += money / 10;
-		money = (money % 10);
-	}
-	if (money / 5 != 0)
-	{
-		cents += money / 5;
-		money = (money % 10);
-	}
-	if (money / 2 != 0)
-	{
-		cents += money / 2;
-		money = (money % 2);
-	}
-	if (money / 1 != 0)
-	{
-		cents += money / 1;
-		money -= (money % 1);
+		cents += money / changes[i];
+		money = money % changes[i];
 	}
 	printf("%d\n", cents);
 	return (0);
