@@ -3,11 +3,12 @@
 #include <stdlib.h>
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
+ * create_array - creates an array of chars, and initializes it with
+ * a specific char.
+ * @size: the size the array new.
+ * @c: the character to assign.
  *
- * Return: Nothing.
+ * Return: Null o the pointer with the changues.
  */
 char *create_array(unsigned int size, char c)
 {
@@ -15,9 +16,9 @@ char *create_array(unsigned int size, char c)
 	char *p;
 	unsigned int i;
 
-	if(size == 0)
+	if (size == 0)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	p = malloc(size * sizeof(*p));
@@ -26,6 +27,6 @@ char *create_array(unsigned int size, char c)
 	{
 		p[i] = c;
 	}
-	return(p);
+	return (p);
 
 }
