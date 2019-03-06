@@ -32,12 +32,10 @@ char *str_concat(char *s1, char *s2)
 	for ( ; i < size_s1; i++)
 	{
 		p[i] = s1[i];
-		if (i < size_s1 - 1)
-			p[i + 1] = s1[i + 1];
 	}
 	for (j = 0; j < size_s2; j++)
 	{
-		p[i] = s2[j];
+		p[i - 1] = s2[j];
 		i++;
 	}
 	return (p);
@@ -63,5 +61,6 @@ int _strlen(char *s)
 	{
 		i++;
 	}
+	i++;
 	return (i);
 }
