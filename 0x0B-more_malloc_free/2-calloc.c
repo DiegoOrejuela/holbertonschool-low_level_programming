@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "holberton.h"
 /**
  * _calloc - allocates memory using malloc..
