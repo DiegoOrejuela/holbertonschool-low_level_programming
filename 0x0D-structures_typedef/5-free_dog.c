@@ -2,11 +2,16 @@
 #include "dog.h"
 
 /**
- * free_dog - creates a new dog.
+ * free_dog - frees dogs.
  * @d: address object dog_t.
  *
  */
 void free_dog(dog_t *d)
 {
-	free(d);
+	if (d != NULL)
+	{
+		free((*d).name);
+		free((*d).owner);
+		free(d);
+	}
 }
