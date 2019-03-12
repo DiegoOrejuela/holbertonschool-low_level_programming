@@ -24,12 +24,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	copyOwner = _strdup(owner);
 	if (copyOwner == NULL)
 	{
+		free(copyName);
 		return (NULL);
 	}
 
 	myDog = malloc(sizeof(dog_t));
 	if (myDog == NULL)
 	{
+		free(copyName);
+		free(copyOwner);
 		free(myDog);
 		return (NULL);
 	}
