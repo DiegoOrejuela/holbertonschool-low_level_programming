@@ -17,7 +17,15 @@ dog_t *new_dog(char *name, float age, char *owner)
 	char *copyOwner;
 
 	copyName = _strdup(name);
+	if (copyName == NULL)
+	{
+		return (NULL);
+	}
 	copyOwner = _strdup(owner);
+	if (copyName == NULL)
+	{
+		return (NULL);
+	}
 
 	myDog = malloc(sizeof(dog_t));
 	if (myDog == NULL)
@@ -30,7 +38,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	(*myDog).owner = copyOwner;
 	return (myDog);
 }
-
+/**
+ * _strdup - returns a pointer to a newly allocated space in memory,
+ * which contains a copy of the string given as a parameter.
+ * @str: string for asiggn.
+ *
+ * Return: Null o the pointer with the changues.
+ */
 char *_strdup(char *str)
 {
 
@@ -51,7 +65,7 @@ char *_strdup(char *str)
 	p = malloc(sizeof(char) * size);
 	if (p == NULL)
 	{
-		free(p); 
+		free(p);
 		return (NULL);
 	}
 
@@ -60,5 +74,4 @@ char *_strdup(char *str)
 		p[i] = str[i];
 	}
 	return (p);
-
 }
