@@ -13,14 +13,20 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *myDog;
+	char *copyName;
+	char *copyOwner;
+
+	copyName = name;
+	copyOwner = owner;
 
 	myDog = malloc(sizeof(dog_t));
 	if (myDog == NULL)
 	{
+		free(myDog);
 		return (NULL);
 	}
-	(*myDog).name = name;
+	(*myDog).name = copyName;
 	(*myDog).age = age;
-	(*myDog).owner = owner;
+	(*myDog).owner = copyOwner;
 	return (myDog);
 }
