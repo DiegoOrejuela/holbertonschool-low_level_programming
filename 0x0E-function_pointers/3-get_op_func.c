@@ -29,12 +29,9 @@ int (*get_op_func(char *s))(int a, int b)
 		{
 			return(ops[i].f);
 		}
-		else
-		{
-			printf("Error\n");
-			exit(99);
-		}
 		i++;
 	}
+	printf("Error\n");
+	exit(99);
 	return (NULL);
 }
