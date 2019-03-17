@@ -30,8 +30,14 @@ void print_all(const char * const format, ...)
 			if (format[i] == *(func[j]).character)
 			{
 				func[j].f(list);
-				if (format[i + 1] != '\0')
+				switch (format[i + 1])
+				{
+				case '\0':
+					;
+					break;
+				default:
 					printf(", ");
+				};
 			}
 			j++;
 		}
@@ -82,12 +88,11 @@ void print_charp(va_list list)
 	char *str;
 
 	str = va_arg(list, char*);
-	if (str != NULL)
-	{
-		printf("%s", str);
-	}
-	else
+	if (str == NULL)
 	{
 		printf("(nil)");
+		return;
 	}
+	printf("%s", str);
+
 }
