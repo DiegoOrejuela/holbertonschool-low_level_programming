@@ -17,6 +17,8 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 
 	if (head == NULL)
 		return (NULL);
+	if (*head == NULL)
+		return (add_nodeint(head, n));
 
 	counter = 0;
 	for (iterator = *head; iterator != NULL; iterator = (*iterator).next)
