@@ -1,7 +1,4 @@
-#include <stdio.h>
 #include "holberton.h"
-
-int _pow_recursion(int x, int y);
 
 /**
  * binary_to_uint - converts a binary number to an unsigned int.
@@ -28,7 +25,6 @@ unsigned int binary_to_uint(const char *b)
 	i--;
 	for ( ; i >= 0; i--, j++)
 	{
-		printf("valor b = %d\n", b[i] - '0');
 		result += (b[i] - '0') * _pow_recursion(2, j);
 	}
 
