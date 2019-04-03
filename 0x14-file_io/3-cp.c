@@ -3,8 +3,8 @@
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include "holberton.h"
 
-int create_file(const char *filename, char *text_content);
 int _strlen(char *s);
 /**
  * main - point of entry.
@@ -23,7 +23,7 @@ int main(int ac, char **av)
 		dprintf(2, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	file = open(av[1], O_RDONLY));
+	file = open(av[1], O_RDONLY);
 	if (file == -1)
 	{
 		dprintf(2, "Error: Can't read from file %s\n", av[1]);
