@@ -54,7 +54,7 @@ int main(int ac, char **av)
 			if (wr == -1)
 			{
 				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-				exit(98);
+				exit(99);
 			}
 		}
 	}
