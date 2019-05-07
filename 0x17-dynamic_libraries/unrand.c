@@ -1,31 +1,23 @@
+#include <stdio.h>
 #include "holberton.h"
 
 int rand(void)
 {
 	static int i;
 
+	i = 0;
 	i++;
 
 	if (i == 1)
 		return(9);
 	else if (i == 2)
-		return(8);
+		return(5);
 	else if (i == 3)
-		return(10);
+		return(1);
 	else if (i == 4)
-		return(24);
+		return(23);
 	else if (i == 5)
-		return(75);
+		return(61);
 	else
-		return(9);
-}
-
-void time(void)
-{
-	;
-}
-
-void srand(void)
-{
-	;
+		return(8);
 }
