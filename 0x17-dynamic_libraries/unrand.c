@@ -19,3 +19,13 @@ int rand(void)
 	else
 		return(9);
 }
+
+void time(void)
+{
+	;
+}
+
+void srand(void)
+{
+	;
+}
