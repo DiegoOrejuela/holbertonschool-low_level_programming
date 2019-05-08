@@ -1,23 +1,8 @@
-#include <stdio.h>
-#include "holberton.h"
-
-int rand(void)
+int rand()
 {
-	static int i;
+	static int p = -1;
+	int num[] = {8, 8, 7, 9, 23, 74};
 
-	i = 0;
-	i++;
-
-	if (i == 1)
-		return(9);
-	else if (i == 2)
-		return(5);
-	else if (i == 3)
-		return(1);
-	else if (i == 4)
-		return(23);
-	else if (i == 5)
-		return(61);
-	else
-		return(8);
+	p++;
+	return(num[p]);
 }
