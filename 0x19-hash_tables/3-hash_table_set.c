@@ -1,6 +1,5 @@
 #include "hash_tables.h"
-#include <stdio.h>
-#include <string.h>
+
 /**
  * hash_table_set - gives you the index of a key.
  * @ht: hash table you want to add or update the key/value.
@@ -24,16 +23,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		if (strcmp((*temp).key, key) == 0)
 		{
+			free((*temp).value);
 			(*temp).value = strdup(value);
 			return (1);
 		}
 		temp = (*temp).next;
 	}
 
-	node = malloc(sizeof(hash_node_t *));
+	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (0);
-	(*node).key = (char *)key;
+	(*node).key = strdup(key);
 	(*node).value = strdup(value);
 
 	if ((*ht).array[index] == NULL) /*Add node when position is empty*/
