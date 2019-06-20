@@ -8,6 +8,9 @@ void insertion_sort_list(listint_t **list)
 {
 	listint_t *marker, *pivote;
 
+	if (list == NULL)
+		return;
+
 	if (*list && (*list)->next)
 	{
 		marker = (*list)->next;
