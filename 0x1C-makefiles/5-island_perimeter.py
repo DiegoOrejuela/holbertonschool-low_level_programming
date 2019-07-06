@@ -9,32 +9,27 @@ def island_perimeter(grid):
     """Create a function def island_perimeter(grid):
     that returns the perimeter of the island described in grid:
     """
-    if len(grid) == 0 or grid == [[]]:
-        return(0)
+    if len(grid) == 0 or grid == [[]]:  # Case: grid is empty
+        return 0
 
-    count_lenght = 0
-    lenght = []
+    y_1, y_2, x_1, x_2 = -1, -1, len(grid), -1
 
-    count_hight = 0
-    hight = []
+    for i in range(len(grid)):
+        for j in range(len(grid[0])):
+            if grid[i][j] == 1 and y_1 == -1:  # Set 1er value y(?, *)
+                y_1 = i
+            elif grid[i][j] == 1:  # Set 2nd value y(*, ?)
+                y_2 = i
 
-    for row in range(len(grid)):
-        count_lenght = 0
-        for column in range(len(grid[row])):
-            if grid[row][column] == 1:
-                count_lenght += 1
-        lenght.append(count_lenght)
+            if grid[i][j] == 1 and j < x_1:  # Set 1er value x(?, *)
+                x_1 = j
+            elif grid[i][j] == 1 and j > x_2:  # Set 2nd value x(*, ?)
+                x_2 = j
 
-    i = 0
-    j = 0
-    while(j < len(grid[0])):
-        i = 0
-        count_hight = 0
-        while(i < len(grid)):
-            if grid[i][j] == 1:
-                count_hight += 1
-            i += 1
-        hight.append(count_hight)
-        j += 1
+    if y_1 == -1:  # case: 1(land zone) was not found
+        return 0
 
-    return max(lenght) * 2 + max(hight) * 2
+    height = len(range(y_1, y_2 + 1))  # Calc: y_1 .. y_2 there is n distance.
+    length = len(range(x_1, x_2 + 1))  # Calc: x_1 .. x_2 there is n distance.
+
+    return height * 2 + length * 2  # Calc: perimeter land zone
