@@ -7,7 +7,8 @@
 
 def island_perimeter(grid):
     """Create a function def island_perimeter(grid):
-    that returns the perimeter of the island described in grid:
+    that returns the perimeter of the island described in grid, but
+    with coordenates for point x and y
     """
     if len(grid) == 0 or grid == [[]]:  # Case: grid is empty
         return 0
